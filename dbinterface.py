@@ -1,3 +1,5 @@
+# Created by Jasper Davey
+
 import sqlite3, sqlinterface
 
 db_name = raw_input("Please enter name of database: ")
