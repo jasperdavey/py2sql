@@ -9,6 +9,7 @@ def create_table(name, values):
 
 def insert_table(tb_name, columns, values):
 	assembler = parser(values)
+	columns = remove_type(columns)
 	t = "INSERT INTO %s (%s) VALUES (%s)" % (tb_name, columns, assembler)
 	return t
 
