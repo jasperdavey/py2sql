@@ -10,7 +10,6 @@ def create_table(name, values):
 def insert_table(tb_name, columns, values):
 	assembler = parser(values)
 	t = "INSERT INTO %s (%s) VALUES (%s)" % (tb_name, columns, assembler)
-	print t
 	return t
 
 def select(name, tb_name):
@@ -35,4 +34,6 @@ def parser(values):
 	return assembler
 
 def remove_type(values):
-	
+	for x in values:
+		assembler.append(x.split(' ')[0])
+	return assembler
